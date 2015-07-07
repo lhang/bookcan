@@ -1,1 +1,1 @@
-python index.py
+web: gunicorn hello:app -b $VCAP_APP_HOST:$VCAP_APP_PORT
