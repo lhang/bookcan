@@ -9,7 +9,3 @@ def index(name = None):
 
 @app.route('')
 # url_for('static', filename = 'index.html')
-
-if __name__ == '__main__':
-	app.dubug = True
-	app.run()
