@@ -1,0 +1,30 @@
+<div class="container" ng-controller="login_registCtrl">
+	<div class="row">
+		<div class="col-md-6">
+			<form novalidate>
+				<div class="form-group">
+					<label>用户名</label>
+					<input name="user" class="form-control" placeholder="请输入用户名" ng-model="user.username">
+				</div>
+				<div class="form-group">
+					<label>密码</label>
+					<input name="passwd" class="form-control" placeholder="请输入密码" ng-model="user.passwd">
+				</div>
+				<div><button ng-click="loginfunc()">登陆</button></div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<form action="regist" method="post">
+				<div class="form-group">
+					<label>用户名</label>
+					<input name="user" class="form-control" placeholder="请输入用户名">
+				</div>
+				<div class="form-group">
+					<label>密码</label>
+					<input name="passwd" class="form-control" placeholder="请输入密码">
+				</div>
+				<div><button type="submmit">注册</button></div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row" ng-controller="newCanCtrl">
+	<div class="col-md-6 col-md-offset-3">
+		<form novalidate>
+			<div class="form-group">
+				<label>书罐名称：</label>
+				<input name="canName" class="form-control" placeholder="请输入书单名称：" ng-controller="can.name">
+			</div>
+
+			<div class="form-group">
+				<label>书罐简介：</label>
+				<textarea name="canIntro" class="form-control" rows="5" placeholder="介绍一下你的书罐吧" ng-controller="can.intro"></textarea>
+			</div>
+			<div ng-repeat="book in can.books">
+				<div>
+					<label for="bookName" class="col-sm-2 control-label">书名：</label>
+					<input name="bookName" class="form-control" id="bookName" placeholder="请输入书名">
+				</div>
+				<div>
+					<label for="bookDescribe" class="col-sm-2 control-label">书籍简介</label>
+					<textarea name="bookIntro" class="form-control" rows="4" id="bookDescribe"></textarea>
+				</div>
+				<div>
+					<label for="bookLink" class="col-sm-2 control-label">bookLind</label>
+					<input name="bookLink" class="form-control" id="bookLink" placeholder="粘贴书籍链接">
+				</div>
+			</div>
+			<br>
+			<div class="row"><a class="btn btn-default" ng-click="newInput()">添加书目</a>
+			<button type="submmit" class="btn btn-default pull-right">提交</button></div>
+		</form>
+		
+	</div>
+</div>
