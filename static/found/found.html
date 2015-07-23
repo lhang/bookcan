@@ -1,31 +1,18 @@
 <!-- content -->
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <div class="col-md-6 home_list container">
+    <div class="col-md-6 home_list container" ng-repeat="can in cans">
       <div class="panel panel-default">
-      <div class="panel-heading"><a href="#/booklist">书单标题</a></div>
+      <div class="panel-heading"><a href="#/canInfo/{{can.can_id}}">{{can.can_name}}</a></div>
         <div class="panel-body">
-          <p>书单简介</p>
+          <p>{{can.can_intro}}</p>
         </div>
         <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-          </ul>
+            <li class="list-group-item" ng-repeat="book in can.book_list track by $index">{{book['name']}}</li>
+        </ul>
       </div>
     </div>
-    <div class="col-md-6 home_list container">
-      <div class="panel panel-default">
-        <div class="panel-heading">书单标题</div>
-        <div class="panel-body">
-          <p>书单简介</p>
-        </div>
-        <ul class="list-group">
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-      </div>
-    </div>
+
   </div>
   <!--           <div class="col-md-2">
   <p>helloworld</p>-->

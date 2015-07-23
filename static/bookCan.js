@@ -2,7 +2,7 @@
 // Declare app level module which depends on views, and components
 angular.module('bookCan', [
   'ngRoute',
-  'bookCan.bookList',
+  'bookCan.canInfo',
   'bookCan.cansList',
   'bookCan.found',
   'bookCan.newCan',

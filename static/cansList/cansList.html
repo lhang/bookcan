@@ -43,12 +43,12 @@
   <div class="col-md-8 col-md-offset-2">
     <div class="col-md-6 home_list container" ng-repeat="can in cans">
       <div class="panel panel-default">
-      <div class="panel-heading"><a href="#/bookList/{{can.id}}">{{can.title}}</a></div>
+      <div class="panel-heading"><a href="#/canInfo/{{can.can_id}}">{{can.can_name}}</a></div>
         <div class="panel-body">
-          <p>{{can.describe}}</p>
+          <p>{{can.can_intro}}</p>
         </div>
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="book in can.booklist">{{book}}</li>
+            <li class="list-group-item" ng-repeat="book in can.book_list track by $index">{{book['name']}}</li>
         </ul>
       </div>
     </div>
